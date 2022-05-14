@@ -1,0 +1,54 @@
+body {background: "./Forest.jpg"  ;
+      background-repeat: no-repeat;
+      background-size:cover;
+  }
+  
+  .navbar-brand {
+    padding: 5px;
+}
+
+  #navbarNav ul {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  #navbarNav li {
+    float: left;
+    width: 50%;
+  }
+  #nav-link li:hover a::before {
+    right: 0;
+    left: 0;
+  }
+  #navbarNav a {
+    color: #848484;
+    font-size: 30px;
+    text-decoration: none;
+    text-align: center;
+    padding: 40px 80;
+    display: block;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  #navbarNav a:hover {
+    color: #96f080;
+  }
+  #navbarNav a::before {
+    content: "";
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    bottom: 0;
+    height: 2px;
+    background-color: #bffca4;
+  }
+  #navbarNav a:hover::before {
+    right: 0;
+    left: 0;
+  }
+  .btn:hover{
+    background-color: #04AA6D;
+}
+  li {
+      list-style-position: center;
+  }

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>BadBank</title>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
+          <link rel="stylesheet" href="style.css">
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!-- don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body background="/Forest.jpg">
+    
+    <div id="root"></div>
+
+    <!-- load react -->
+    <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-router@5.2.1/umd/react-router.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-router-dom@5.2.1/umd/react-router-dom.min.js" crossorigin></script>
+
+    <!-- load our react component. -->
+    <script src="context.js" defer type="text/babel"></script>
+    <script src="navbar.js" defer type="text/babel"></script>
+    <script src="createaccount.js" defer type="text/babel"></script>
+    <script src="deposit.js" defer type="text/babel"></script>
+    <script src="withdraw.js" defer type="text/babel"></script>
+    <script src="alldata.js" defer type="text/babel"></script>
+    <script src="home.js" defer type="text/babel"></script>
+    <script src="index.js" defer type="text/babel"></script>
+    <script src="login.js" defer type="text/babel"></script>
+    <script type="text/javascript">
+      function locationHashChanged() {
+        let lnk = document.getElementsByClassName("nav-item");
+        for (i = 0; i < lnk.length; i++){
+          let el = document.getElementById(lnk[i].id);
+          location.hash === "#/" + lnk[i].id + "/" ? 
+          (el.style.backgroundColor = "#96f080", el.style.borderRadius = "5px") : (el.style.backgroundColor = "#212529", el.style.borderRadius = "5px")
+        }
+      }
+      window.onhashchange = locationHashChanged;
+     </script>
+   
+   <script type="text/javascript">
+   const firebaseConfig = {
+    apiKey: "AIzaSyATZHoXdYBgH-BZDe0qg6K3CjF6zMPjISc",
+    authDomain: "bad-bank-c77ae.firebaseapp.com",
+    projectId: "bad-bank-c77ae",
+    storageBucket: "bad-bank-c77ae.appspot.com",
+    messagingSenderId: "753223969560",
+    appId: "1:753223969560:web:fe9023dd5623eadcd90c6d"
+};
+</script>
+  
+</body>
+</html>
